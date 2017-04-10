@@ -1,24 +1,57 @@
-# README
+# TWitter
+- - -
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+アカウント作成, アカウント編集, ログイン ,ログアウト, 文字の投稿, 画像の投稿, フォロー機能
+- - -
 
-Things you may want to cover:
+## Database Design
+- - -
+### tweets table
+#### column
+```
+t.text       :body, null: false  
+t.string     :image  
+t.references :user, foreign_key: true  
+t.timestamps  
+```
 
-* Ruby version
+#### association
+```
+belongs_to :user  
+```
+- - -
 
-* System dependencies
+### users table
+#### column
+```
+t.string :name, null:false  
+t.string :user_name  
+t.string :mail
+t.string :TEL  
+t.string :password, null:false  
+t.string :introduction  
+t.string :birthday  
+t.string :from  
+t.string :profile_image  
+t.string :background_image  
+```
+#### association
+```
+has_many :messages  
+acts_in_relation with: :follow  
+```
+- - -
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### follows table
+#### column
+```
+t.integer :user_id  
+t.integer :target_user_id  
+t.timestamps  
+```
+#### association
+```
+acts_in_relation :action, source: :user, target: :user  
+```
+- - -
