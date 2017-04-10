@@ -46,7 +46,7 @@ acts_in_relation with: :follow
 ### follows table
 #### column
 ```
-t.integer :user_id  
+t.integer :follow_user_id  
 t.integer :target_user_id  
 t.timestamps  
 ```
