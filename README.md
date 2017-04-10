@@ -10,7 +10,7 @@
 ### tweets table
 #### column
 ```
-t.text       :body, null: false  
+t.string     :body, null: false  
 t.string     :image  
 t.references :user, foreign_key: true  
 t.timestamps  
@@ -28,7 +28,7 @@ belongs_to :user
 t.string :name, null:false  
 t.string :user_name  
 t.string :mail
-t.string :TEL  
+t.string :phone_number  
 t.string :password, null:false  
 t.string :introduction  
 t.string :birthday  
