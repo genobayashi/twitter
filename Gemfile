@@ -39,6 +39,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'dotenv-rails'
 gem 'font-awesome-rails'
+gem 'bootstrap-sass'
 
 group :production do
   gem 'unicorn'

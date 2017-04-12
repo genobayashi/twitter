@@ -1,3 +1,59 @@
-// Place all the styles related to the tweets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.toppageheader{
+  @include clearfix();
+
+  .header-top{
+    @include clearfix();
+    height: 80px;
+    background-color: #38AEF0;
+    padding: 0 200px;
+    line-height: 80px;
+
+    .header-top-left{
+      float: left;
+      width: calc(100% / 3);
+
+      #top_twitter_icon{
+        margin: 0 auto;
+        color: white;
+      }
+    }
+
+    .header-top-center{
+      float: left;
+      width: calc(100% / 3);
+
+      &__comment{
+        text-align: center;
+        color: $WhiteColor;
+        font-size: 30px;
+      }
+    }
+
+    .header-top-right{
+      float: left;
+      width: calc(100% / 3);
+
+      &__user-info{
+        float: right;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .header-bottom-navbar{
+    // @include clearfix();
+    height: 70px;
+    padding: 0 200px;
+    line-height: 60px;
+
+    .li{
+      // float: left;
+      // border-right: 1px solid $Lite-Gray;
+      // border-left: 1px solid $Lite-Gray;
+      // padding: 5px 10px;
+
+      .header-bottom-navbar__top{
+      }
+    }
+  }
+}
