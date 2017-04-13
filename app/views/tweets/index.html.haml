@@ -6,57 +6,62 @@
       .header-top-center__comment
         いまどうしてる？
     .header-top-right
-      .ul
-        .li.header-top-right__user-info
+      %ul
+        %li.header-top-right__user-info
           アカウント作成
-        .li.header-top-right__user-info
+        %li.header-top-right__user-info
           ログイン
   .header-bottom-navbar
     .container
       .row
-        .ul
-          .li
-            .header-bottom-navbar__search.col-lg-1
-            = fa_icon('search 2x')
-          .li
-            .header-bottom-navbar__top.col-lg-1
+        %ul
+          %li.col-lg-1
+            .header-bottom-navbar__search
+              = fa_icon('search 2x')
+          %li.col-lg-1
+            .header-bottom-navbar__top
               トップ
-          .li
-            .header-bottom-navbar__entertainment.col-lg-1
+          %li.col-lg-1
+            .header-bottom-navbar__entertainment
               エンタメ
-          .li
-            .header-bottom-navbar__sports.col-lg-1
+          %li.col-lg-1
+            .header-bottom-navbar__sports
               スポーツ
-          .li
-            .header-bottom-navbar__news.col-lg-1
+          %li.col-lg-1
+            .header-bottom-navbar__news
               ニュース
-          .li
-            .header-bottom-navbar__fun.col-lg-1
+          %li.col-lg-1
+            .header-bottom-navbar__fun
               FUN
-          .li
-            .header-bottom-navbar__public.col-lg-5
+          %li.col-lg-4
+            .header-bottom-navbar__public
               政府・公共機関・ライフライン
-          .li
-            .header-bottom-navbar__other.col-lg-1
+          %li.col-lg-1
+            .header-bottom-navbar__other
               その他
-%contents
+.contents
   .content-top
     .content-top__moment
-      ツイート
-      ツイート
-      ツイート
-    .content-top__mini-login
-      Twitterにログイン
-      電話番号/メールアドレス・・・・
-      パスワード
-      ログイン
+      .title_moment
+        モーメント
+      .all_moment
+        すべて見る
+      .container
+        .row
+          .moment_1.col-lg-2
+          .moment_2.col-lg-2
+          .moment_3.col-lg-2
+          .mini_login.col-lg-2
   .content-center
     .content-center__head
-      注目のツイート
-    .content-center__comedy
-    .content-center__cute
-    .content-center__anime
-    .content-center__music
+      %span
+        注目のツイート
+    .container
+      .row
+        .content-center__comedy.col-lg-2
+        .content-center__cute.col-lg-2
+        .content-center__anime.col-lg-2
+        .content-center__music.col-lg-2
     .content-center__movie
     .content-center__international
     .content-center__soccer
@@ -66,55 +71,56 @@
     .content-center__game
     .content-center__economy
     .content-center__government
-%footer
+.footer
   .footer-top
-    .ul
-      .li
-        .footer__menu
+    %ul
+      %li
+        .footer-top__menu
           twitterについて
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           ヘルプセンター
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           ブログ
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           ステータス
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           採用情報
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           規約
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           プライバシーポリシー
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           クッキー
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           広告について
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           ブランド
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           アプリ連携
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           広告管理画面
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           広告掲載方法
-      .li
-        .footer__menu
+      %li
+        .footer-top__menu
           開発者
-    .ul
-      .li
-        .footer__menu
+  .footer-bottom
+    %ul
+      %li
+        .footer-bottom__menu
           プロフィール一覧
-      .li
-        .footer__menu
+      %li
+        .footer-bottom__menu
           © 2017 Twitter
