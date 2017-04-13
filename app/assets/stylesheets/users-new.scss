@@ -1,0 +1,46 @@
+.user-header {
+background: #43C6AC;
+background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);
+background: linear-gradient(to right, #F8FFAE, #43C6AC);
+  #users_twitter_icon {
+    padding-top: 15px;
+    padding-left: 48%;
+    padding-bottom: 15px;
+    text-align: center;
+    color:white;
+  }
+  .login {
+    float: right;
+    color: white;
+    padding-top: 18px;
+    padding-right: 50px;
+  }
+  .language {
+    float: right;
+    color: white;
+    padding-top: 18px;
+    padding-right: 10px;
+  }
+}
+
+.user-center-text {
+  font-size: 31px;
+  text-align: center;
+  margin-top: 60px;
+}
+.user-info-field {
+  margin-left: 39%;
+}
+.user-info-btn {
+  margin-top: 15px;
+  background-color: #00B9EF;
+  color: white;
+  text-align: center;
+  height: 50px;
+  width: 280px;
+}
+.info-text-box {
+  height: 50px;
+  width: 280px;
+  font-size: 18px;
+}
