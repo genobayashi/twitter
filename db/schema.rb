@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20170413072438) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "name",                                null: false
-    t.string   "user_name",                           null: false
+    t.string   "name"
+    t.string   "user_name"
     t.string   "phone_number"
     t.string   "introduction"
     t.string   "birthday"
