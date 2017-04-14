@@ -1,0 +1,27 @@
+.correct{
+  margin-right: 15px;
+}
+
+
+
+.global-topbar{
+  background-color: $WhiteColor;
+  padding: 0 200px;
+
+  .navbar-twiiter-icon{
+    padding-left: 100px;
+
+      #user-page-twitter-icon{
+        color: $LiteBlue;
+      }
+  }
+
+  #tweet-btn{
+    background-color: $LiteBlue;
+    color: $WhiteColor;
+  }
+}
+
+.test{
+  margin-top: 100px;
+}
