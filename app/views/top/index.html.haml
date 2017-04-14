@@ -8,9 +8,9 @@
     .header-top-right
       %ul
         %li.header-top-right__user-info
-          アカウント作成
+          = link_to 'アカウント作成',new_user_registration_path, class: 'post'
         %li.header-top-right__user-info
-          ログイン
+          = render "modal"
   .header-bottom-navbar
     .container
       .row
