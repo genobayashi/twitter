@@ -1,19 +1,13 @@
-.correct{
-  margin-right: 15px;
-}
-
-
-
 .global-topbar{
   background-color: $WhiteColor;
-  padding: 0 200px;
+  padding: 0 15%;
 
   .navbar-twiiter-icon{
-    padding-left: 100px;
+    padding-left: 70px;
 
-      #user-page-twitter-icon{
-        color: $LiteBlue;
-      }
+    #user-page-twitter-icon{
+      color: $LiteBlue;
+    }
   }
 
   #tweet-btn{
@@ -22,6 +16,68 @@
   }
 }
 
-.test{
-  margin-top: 100px;
+.t-contents{
+  @include clearfix();
+  margin-top: 51px;
+  padding: 0 15%;
+  background-color: $very-Lite-Gray;
+
+  .t-content-left{
+    float: left;
+    width: 25%;
+    background-color: $very-Lite-Gray;
+
+    .t-content-left-top{
+      height: 150px;
+      margin: 10px 10px 0 0;
+      border: 1px solid red;
+    }
+
+    .t-content-left-bottom{
+      height: 400px;
+      margin: 10px 10px 0 0;
+      border: 1px solid red;
+    }
+  }
+
+  .t-content-center{
+    float: left;
+    width: 50%;
+    background-color: $very-Lite-Gray;
+    margin-top: 10px;
+
+    .t-content-center-top{
+      height: 50px;
+      border: 1px solid blue;
+    }
+
+    .t-content-center-bottom{
+      height: 1000px;
+      border: 1px solid blue;
+    }
+  }
+
+  .t-content-right{
+    float: left;
+    width: 25%;
+    background-color: $very-Lite-Gray;
+
+    .t-content-right-top{
+      height: 150px;
+      margin: 10px 0 0 10px;
+      border: 1px solid green;
+    }
+
+    .t-content-right-center{
+      height: 100px;
+      margin: 10px 0 0 10px;
+      border: 1px solid green;
+    }
+
+    .t-content-right-bottom{
+      height: 100px;
+      margin: 10px 0 0 10px;
+      border: 1px solid green;
+    }
+  }
 }
