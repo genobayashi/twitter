@@ -1,5 +1,7 @@
 class TweetsController < ApplicationController
 
+  before_action :move_to_top_index
+
   def index
     @tweets = Tweet.order("created_at DESC").includes(:user)
     @tweet = Tweet.new
@@ -14,5 +16,9 @@ class TweetsController < ApplicationController
   private
   def tweet_params
     params.require(:tweet).permit(:body, :image)
+  end
+
+  def move_to_top_index
+    redirect_to top_index_path unless user_signed_in?
   end
 end
