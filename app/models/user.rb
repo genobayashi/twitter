@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :messages
-  # acts_in_relation with: :follow
+  acts_in_relation with: :follow
 end
