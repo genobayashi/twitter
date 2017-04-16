@@ -20,12 +20,12 @@
   @include clearfix();
   margin-top: 51px;
   padding: 0 15%;
-  background-color: $very-Lite-Gray;
+  background-color: $Lite-Purple;
 
   .t-content-left{
     float: left;
     width: 25%;
-    background-color: $very-Lite-Gray;
+    background-color: $Lite-Purple;
 
     .t-content-left-top{
       height: 150px;
@@ -43,24 +43,102 @@
   .t-content-center{
     float: left;
     width: 50%;
-    background-color: $very-Lite-Gray;
+    background-color: $Lite-Purple;
     margin-top: 10px;
 
     .t-content-center-top{
       height: 50px;
+      background-color: #eff;
       border: 1px solid blue;
+
+      .t-content-center-top-textfield{
+        height: 30px;
+        width: 80%;
+        margin: 10px;
+      }
     }
 
     .t-content-center-bottom{
       height: 1000px;
       border: 1px solid blue;
+
+      .t-content-center-bottom-tweet{
+        @include clearfix();
+        background-color: $WhiteColor;
+        min-height: 85px;
+
+        .t-content-center-bottom-tweet-left{
+          float: left;
+          height: 100px;
+          width: 50px;
+          background-color: red;
+        }
+
+        .t-content-center-bottom-tweet-right{
+          @include clearfix();
+          padding: 10px;
+          border: 1px solid $Lite-Gray;
+
+          .t-content-center-bottom-tweet-right-top{
+            background-color: $WhiteColor;
+            margin-bottom: 0;
+            font-size: 11px;
+            height: 20px !important;
+            min-height: 20px !important;
+            border: 1px solid $WhiteColor;
+
+            .navbar-brand {
+              padding: 0;
+              height: 20px;
+            }
+
+            .navbar-nav > li > a {
+              padding: 0 0 0 10px !important;
+            }
+
+            .prfile_image-size{
+              height: 65px;
+            }
+
+
+            &__name{
+              float:left;
+            }
+
+            &__user_name{
+              float: left;
+            }
+
+            &__created_at{
+              float: left;
+            }
+
+            &__dropdown{
+              float: right;
+            }
+          }
+
+          .t-content-center-bottom-tweet-right-bottom{
+            min-height: 45px;
+            padding-left: 75px;
+
+            &__body{
+              clear: both;
+            }
+
+            &__image{
+              clear: both;
+            }
+          }
+        }
+      }
     }
   }
 
   .t-content-right{
     float: left;
     width: 25%;
-    background-color: $very-Lite-Gray;
+    background-color: $Lite-Purple;
 
     .t-content-right-top{
       height: 150px;
