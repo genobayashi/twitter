@@ -30,13 +30,48 @@
     .t-content-left-top{
       height: 150px;
       margin: 10px 10px 0 0;
-      border: 1px solid red;
+      border: 1px solid $Lite-Gray;
     }
 
     .t-content-left-bottom{
-      height: 400px;
       margin: 10px 10px 0 0;
-      border: 1px solid red;
+      padding: 10px;
+      border: 1px solid $Lite-Gray;
+      background-color: $WhiteColor;
+
+      .t-content-left-bottom-title{
+        @include clearfix();
+
+        &__name{
+          float: left;
+          color: $Gray;
+        }
+
+        &__change{
+          float: left;
+          font-size: 11px;
+          font-weight: bold;
+          color: $LittleLiteBlue;
+          margin: 3px 0 0 10px;
+        }
+      }
+
+      .t-content-left-bottom-list{
+
+        .t-content-left-bottom-list-once{
+          margin-top: 10px;
+          font-size: 11px;
+
+          &__title{
+            font-weight: bold;
+            color: $LittleLiteBlue;
+          }
+
+          &__content{
+            color: $Gray;
+          }
+        }
+      }
     }
   }
 
@@ -45,11 +80,12 @@
     width: 50%;
     background-color: $Lite-Purple;
     margin-top: 10px;
+    border: 1px solid $Lite-Gray;
 
     .t-content-center-top{
       height: 50px;
       background-color: #eff;
-      border: 1px solid blue;
+      border-bottom: 1px solid $Lite-Gray;
 
       .t-content-center-top-textfield{
         height: 30px;
@@ -59,27 +95,113 @@
     }
 
     .t-content-center-bottom{
-      height: 1000px;
-      border: 1px solid blue;
 
       .t-content-center-bottom-tweet{
         @include clearfix();
         background-color: $WhiteColor;
         min-height: 85px;
+        padding: 10px;
+        border-bottom: 1px solid $Lite-Gray;
 
-        .t-content-center-bottom-tweet-left{
-          float: left;
-          height: 100px;
-          width: 50px;
-          background-color: red;
+        .t-content-center-bottom-tweet-top{
+          background-color: $WhiteColor;
+          margin-bottom: 0;
+          font-size: 11px;
+          height: 20px !important;
+          min-height: 20px !important;
+          border: 1px solid $WhiteColor;
+
+          .navbar-brand {
+            padding: 0;
+            height: 20px;
+          }
+
+          .navbar-nav > li > a {
+            padding: 0 0 0 10px !important;
+          }
+
+          .prfile_image-size{
+            height: 65px;
+            width: 65px;
+          }
+
+
+          &__name{
+            float:left;
+          }
+
+          &__user_name{
+            float: left;
+          }
+
+          &__created_at{
+            float: left;
+          }
+
+          &__dropdown{
+            float: right;
+          }
         }
 
-        .t-content-center-bottom-tweet-right{
-          @include clearfix();
-          padding: 10px;
-          border: 1px solid $Lite-Gray;
+        .t-content-center-bottom-tweet-bottom{
+          min-height: 45px;
+          padding-left: 75px;
 
-          .t-content-center-bottom-tweet-right-top{
+          &__body{
+            clear: both;
+          }
+
+          &__image{
+            clear: both;
+          }
+        }
+      }
+    }
+  }
+
+  .t-content-right{
+    float: left;
+    width: 25%;
+    background-color: $Lite-Purple;
+
+    .t-content-right-top{
+      background-color: $WhiteColor;
+      margin: 10px 0 0 10px;
+      padding: 10px;
+      border: 1px solid $Lite-Gray;
+
+      .t-content-right-top-title{
+        @include clearfix();
+
+        &__name{
+          float: left;
+          color: $Gray;
+        }
+
+        &__update{
+          float: left;
+          font-size: 11px;
+          font-weight: bold;
+          color: $LittleLiteBlue;
+          margin: 3px 0 0 10px;
+        }
+
+        &__see-all{
+          float: left;
+          font-size: 11px;
+          font-weight: bold;
+          color: $LittleLiteBlue;
+          margin: 3px 0 0 10px;
+        }
+      }
+
+      .t-content-right-top-recommend-user-list{
+
+        .t-content-right-top-recommend-user-list-once{
+          height: 70px;
+          padding-top: 10px;
+
+          &__name{
             background-color: $WhiteColor;
             margin-bottom: 0;
             font-size: 11px;
@@ -96,60 +218,52 @@
               padding: 0 0 0 10px !important;
             }
 
-            .prfile_image-size{
-              height: 65px;
+            .recommend-user-prfile_image-size{
+              height: 50px;
+              width: 50px;
             }
 
-
-            &__name{
-              float:left;
+            .recommend-user-name{
+              font-weight: bold;
+              color: black;
             }
 
-            &__user_name{
-              float: left;
+            .glyphicon-remove{
+              margin-right: 5px;
             }
 
-            &__created_at{
-              float: left;
-            }
-
-            &__dropdown{
-              float: right;
-            }
-          }
-
-          .t-content-center-bottom-tweet-right-bottom{
-            min-height: 45px;
-            padding-left: 75px;
-
-            &__body{
-              clear: both;
-            }
-
-            &__image{
-              clear: both;
+            .t-content-right-top-recommend-user-list-once__follow-btn{
+              margin-left: 60px !important;
+              font-size: 11px !important;
+              background-color: $very-Lite-Gray;
             }
           }
         }
       }
-    }
-  }
-
-  .t-content-right{
-    float: left;
-    width: 25%;
-    background-color: $Lite-Purple;
-
-    .t-content-right-top{
-      height: 150px;
-      margin: 10px 0 0 10px;
-      border: 1px solid green;
     }
 
     .t-content-right-center{
       height: 100px;
       margin: 10px 0 0 10px;
       border: 1px solid green;
+
+      &__find-user-for-gmail{
+        @include clearfix();
+
+        &-left{
+          float: left;
+          height: 50px;
+          width: 50px;
+        }
+
+        &-right{
+          float: left;
+        }
+      }
+
+      &__other-address-list{
+
+      }
     }
 
     .t-content-right-bottom{
