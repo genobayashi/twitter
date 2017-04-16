@@ -1,3 +1,4 @@
+= link_to fa_icon('twitter 2x'), root_path, class: 'user-page-twitter-icon'
 %nav.navbar.navbar-default.navbar-fixed-top.global-topbar
   .container-fluid
     .navbar-header
@@ -24,8 +25,6 @@
           = link_to root_path do
             = fa_icon('commenting lg')
             メッセージ
-        %li.navbar-nav.navbar-twiiter-icon
-          = link_to fa_icon('twitter lg'), root_path, id: 'user-page-twitter-icon'
       %button.btn.btn-default.navbar-btn.navbar-right{type: 'button', id: 'tweet-btn'} ツイート
       %ul.nav.navbar-nav.navbar-right
         %li.dropdown
@@ -79,15 +78,16 @@
         - @user.each do |user|
           = render partial: 't-content-right-top-recommend-user-list', locals: { user: user }
     .t-content-right-center
-      .t-content-right-center__find-user-for-gmail
-        .t-content-right-center__find-user-for-gmail-left
-          %img.prfile_image-size{:alt => "Open graph fallback", :src => "https://www.google.co.jp/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwj0oqT3yqnTAhUCgbwKHdoOAvQQjRwIBw&url=https%3A%2F%2Fsmhn.info%2F201512-gmail-unread&psig=AFQjCNGt0hL_a_2rT7TTMUphG84jqRPUmA&ust=1492453023546788.jpg"}/
-        .t-content-right-center__find-user-for-gmail-right
-          %p.first-comment
-            知り合いを見つけましょう
-          %p.second-comment
-            Gmailからアドレス帳をインポートする
-      .t-content-right-center__other-address-list
-        他のアドレス帳に接続する
+      = render partial: 't-content-right-center'
     .t-content-right-bottom
       .t-content-right-bottom__any-menu
+        .first-stage
+          © 2017 Twitter / Twitterについて
+        .second-stage
+          クッキー / 広告について / ブランド ブログ
+        .third-stage
+          ステータス / アプリ連携 / 採用情報
+        .fourth-stage
+          広告掲載方法 / 開発者
+      .t-content-right-bottom__twitter-advertisement
+        twitter広告

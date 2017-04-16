@@ -1,13 +1,18 @@
+.user-page-twitter-icon{
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  z-index: 2;
+  color: $LiteBlue;
+}
+
 .global-topbar{
   background-color: $WhiteColor;
   padding: 0 15%;
+  z-index: 1;
 
   .navbar-twiiter-icon{
     padding-left: 70px;
-
-    #user-page-twitter-icon{
-      color: $LiteBlue;
-    }
   }
 
   #tweet-btn{
@@ -21,6 +26,7 @@
   margin-top: 51px;
   padding: 0 15%;
   background-color: $Lite-Purple;
+  min-height: 150vh;
 
   .t-content-left{
     float: left;
@@ -243,33 +249,70 @@
     }
 
     .t-content-right-center{
-      height: 100px;
       margin: 10px 0 0 10px;
-      border: 1px solid green;
+      padding: 10px;
+      background-color: $WhiteColor;
+      border: 1px solid $Lite-Gray;
 
       &__find-user-for-gmail{
         @include clearfix();
+        padding-bottom: 10px;
 
         &-left{
           float: left;
-          height: 50px;
-          width: 50px;
+
+          .profile_image-size{
+            height: 40px;
+            width: 40px;
+          }
         }
 
         &-right{
           float: left;
+          padding: 5px;
+
+          .first-comment{
+            font-size: 11px;
+            font-weight: bold;
+          }
+
+          .second-comment{
+            font-size: 10px;
+            color: $Gray;
+          }
         }
       }
 
       &__other-address-list{
-
+        font-size: 12px;
+        text-align: center;
+        color: $LittleLiteBlue;
+        padding: 10px 0 0 0;
+        border-top: 1px solid $Lite-Gray;
+        font-weight: bold;
       }
     }
 
     .t-content-right-bottom{
-      height: 100px;
       margin: 10px 0 0 10px;
-      border: 1px solid green;
+      padding: 10px;
+      background-color: $WhiteColor;
+      border: 1px solid $Lite-Gray;
+
+      &__any-menu{
+        font-size: 11px;
+        color: $Gray;
+        padding-bottom: 10px;
+      }
+
+      &__twitter-advertisement{
+        font-size: 12px;
+        text-align: center;
+        color: $LittleLiteBlue;
+        padding: 10px 0 0 0;
+        border-top: 1px solid $Lite-Gray;
+        font-weight: bold;
+      }
     }
   }
 }
