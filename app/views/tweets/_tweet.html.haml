@@ -1,63 +1,62 @@
 .t-content-center-bottom-tweet
-  .t-content-center-bottom-tweet-right
-    %nav.navbar.navbar-default.t-content-center-bottom-tweet-right-top
-      .container-fluid
-        .navbar-header
-          %button.navbar-toggle.collapsed{"data-target" => "#navbarEexample", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.navbar-brand{:href => "#"}
-            = image_tag(tweet.user.profile_image, class: 'prfile_image-size')
-        #navbarEexample.collapse.navbar-collapse
-          %ul.nav.navbar-nav
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :role => "button"}
-                = tweet.user.name
-                %span.caret
-              %ul.dropdown-menu{:role => "menu"}
-                %li
-                  %a{:href => "#"} リンクリストＡ１
-                %li
-                  %a{:href => "#"} リンクリストＡ２
-                %li
-                  %a{:href => "#"} リンクリストＡ３
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :role => "button"}
-                = tweet.user.user_name
-                %span.caret
-              %ul.dropdown-menu{:role => "menu"}
-                %li
-                  %a{:href => "#"} リンクリストＢ１
-                %li
-                  %a{:href => "#"} リンクリストＢ２
-                %li
-                  %a{:href => "#"} リンクリストＢ３
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :role => "button"}
-                = date_format(tweet.created_at)
-                %span.caret
-              %ul.dropdown-menu{:role => "menu"}
-                %li
-                  %a{:href => "#"} リンクリストＣ１
-                %li
-                  %a{:href => "#"} リンクリストＣ２
-                %li
-                  %a{:href => "#"} リンクリストＣ３
-          %ul.nav.navbar-nav.navbar-right
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :role => "button"}
-                %span.caret
-              %ul.dropdown-menu{:role => "menu"}
-                %li
-                  %a{:href => "#"} リンク・リストＤ１
-                %li
-                  %a{:href => "#"} リンク・リストＤ２
-                %li
-                  %a{:href => "#"} リンク・リストＤ３
-    .t-content-center-bottom-tweet-right-bottom
-      .t-content-center-bottom-tweet-right-bottom__body
-        = tweet.body if tweet.body?
-      .t-content-center-bottom-tweet-right-bottom__image
-        = image_tag(tweet.image) if tweet.image?
+  %nav.navbar.navbar-default.t-content-center-bottom-tweet-top
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle.collapsed{"data-target" => "#navbarEexample", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => "#"}
+          = image_tag(tweet.user.profile_image, class: 'prfile_image-size')
+      #navbarEexample.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :role => "button"}
+              = tweet.user.name
+              %span.caret
+            %ul.dropdown-menu{:role => "menu"}
+              %li
+                %a{:href => "#"} リンクリストＡ１
+              %li
+                %a{:href => "#"} リンクリストＡ２
+              %li
+                %a{:href => "#"} リンクリストＡ３
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :role => "button"}
+              = tweet.user.user_name
+              %span.caret
+            %ul.dropdown-menu{:role => "menu"}
+              %li
+                %a{:href => "#"} リンクリストＢ１
+              %li
+                %a{:href => "#"} リンクリストＢ２
+              %li
+                %a{:href => "#"} リンクリストＢ３
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :role => "button"}
+              = date_format(tweet.created_at)
+              %span.caret
+            %ul.dropdown-menu{:role => "menu"}
+              %li
+                %a{:href => "#"} リンクリストＣ１
+              %li
+                %a{:href => "#"} リンクリストＣ２
+              %li
+                %a{:href => "#"} リンクリストＣ３
+        %ul.nav.navbar-nav.navbar-right
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :role => "button"}
+              %span.caret
+            %ul.dropdown-menu{:role => "menu"}
+              %li
+                %a{:href => "#"} リンク・リストＤ１
+              %li
+                %a{:href => "#"} リンク・リストＤ２
+              %li
+                %a{:href => "#"} リンク・リストＤ３
+  .t-content-center-bottom-tweet-bottom
+    .t-content-center-bottom-tweet-bottom__body
+      = tweet.body if tweet.body?
+    .t-content-center-bottom-tweet-bottom__image
+      = image_tag(tweet.image) if tweet.image?
