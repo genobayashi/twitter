@@ -1,13 +1,18 @@
+.user-page-twitter-icon{
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  z-index: 2;
+  color: $LiteBlue;
+}
+
 .global-topbar{
   background-color: $WhiteColor;
   padding: 0 15%;
+  z-index: 1;
 
   .navbar-twiiter-icon{
     padding-left: 70px;
-
-    #user-page-twitter-icon{
-      color: $LiteBlue;
-    }
   }
 
   #tweet-btn{

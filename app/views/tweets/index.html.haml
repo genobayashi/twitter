@@ -1,3 +1,4 @@
+= link_to fa_icon('twitter 2x'), root_path, class: 'user-page-twitter-icon'
 %nav.navbar.navbar-default.navbar-fixed-top.global-topbar
   .container-fluid
     .navbar-header
@@ -24,8 +25,6 @@
           = link_to root_path do
             = fa_icon('commenting lg')
             メッセージ
-        %li.navbar-nav.navbar-twiiter-icon
-          = link_to fa_icon('twitter lg'), root_path, id: 'user-page-twitter-icon'
       %button.btn.btn-default.navbar-btn.navbar-right{type: 'button', id: 'tweet-btn'} ツイート
       %ul.nav.navbar-nav.navbar-right
         %li.dropdown
