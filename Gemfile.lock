@@ -38,6 +38,10 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts_in_relation (0.2.2)
+      caller_class
+      rails
+      verbs
     airbrussh (1.1.2)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (7.1.4)
@@ -53,6 +57,7 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.10.0)
     byebug (9.0.6)
+    caller_class (0.0.1)
     capistrano (3.8.0)
       airbrussh (>= 1.0.0)
       i18n
@@ -221,6 +226,9 @@ GEM
       kgio (~> 2.6)
       raindrops (~> 0.7)
     uniform_notifier (1.10.0)
+    verbs (2.1.4)
+      activesupport (>= 2.3.4)
+      i18n
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.5.0)
@@ -236,6 +244,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_in_relation
   bootstrap-sass
   bullet
   byebug
