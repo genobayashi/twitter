@@ -60,7 +60,11 @@
     .t-content-left-bottom
   .t-content-center
     .t-content-center-top
+      = form_for @tweet do |f|
+        = f.text_field :body, placeholder: '  いまどうしてる？', class: 't-content-center-top-textfield'
+        = f.submit 'ツイート', class: 't-content-center-top-send-btn'
     .t-content-center-bottom
+      = render partial: 'tweet', collection: @tweets
   .t-content-right
     .t-content-right-top
       .t-content-right-top__recommend-user
