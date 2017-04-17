@@ -42,6 +42,7 @@ gem 'font-awesome-rails'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'carrierwave'
+gem 'rmagick'
 
 group :production do
   gem 'unicorn'
