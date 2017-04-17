@@ -15,6 +15,20 @@
     padding-left: 70px;
   }
 
+  #topbar-seach{
+    background-color: $very-Lite-Gray;
+  }
+
+  .topbar-profile_image{
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
+
+  .topbar-profile_image__size{
+    height: 30px;
+    width: 30px;
+  }
+
   #tweet-btn{
     background-color: $LiteBlue;
     color: $WhiteColor;
@@ -88,15 +102,61 @@
     margin-top: 10px;
     border: 1px solid $Lite-Gray;
 
-    .t-content-center-top{
-      height: 50px;
+    .t-content-center-tweet{
+      @include clearfix();
       background-color: #eff;
       border-bottom: 1px solid $Lite-Gray;
+      padding: 10px;
 
-      .t-content-center-top-textfield{
-        height: 30px;
-        width: 80%;
-        margin: 10px;
+      .t-content-center-tweet-top{
+        @include clearfix();
+
+        &__profile_image{
+          float: left;
+
+          &__size{
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+          }
+        }
+
+        &__textarea{
+          float: left;
+          width: calc(100% - 50px);
+        }
+      }
+
+      .t-content-center-tweet-bottom{
+
+        .navbar-collapse{
+          padding: 0;
+        }
+
+        .navbar{
+          min-height: auto;
+          margin-bottom: 0;
+          background-color: #eff;
+          border-style: none;
+        }
+
+        .navbar-nav > li > a {
+          padding: 13px 20px 10px;
+        }
+
+        .t-content-center-tweet-bottom-icon{
+          color: $LittleLiteBlue;
+        }
+
+        .navbar-btn{
+          margin: 10px 0 0 0;
+        }
+
+        .t-content-center-tweet-bottom-send-btn{
+          background-color: $LiteBlue;
+          color: $WhiteColor;
+          margin-right: 0;
+        }
       }
     }
 

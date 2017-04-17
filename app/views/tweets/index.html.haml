@@ -25,11 +25,13 @@
           = link_to root_path do
             = fa_icon('commenting lg')
             メッセージ
-      %button.btn.btn-default.navbar-btn.navbar-right{type: 'button', id: 'tweet-btn'} ツイート
+      %button.btn.btn-default.navbar-btn.navbar-right#tweet-btn
+        %span.glyphicon.glyphicon-pencil{"aria-hidden" => "true"}
+        ツイート
       %ul.nav.navbar-nav.navbar-right
         %li.dropdown
-          %a.dropdown-toggle{'data-toggle' => 'dropdown', :href => '', :role => 'button'}
-            ユーザ
+          %a.dropdown-toggle.topbar-profile_image{'data-toggle' => 'dropdown', :href => '', :role => 'button'}
+            = image_tag(current_user.profile_image, class: 'topbar-profile_image__size')
             %span.caret
           %ul.dropdown-menu{:role => 'menu'}
             %li
@@ -45,7 +47,7 @@
       %form.navbar-form.navbar-right{role: 'search'}
         .form-group
           %input.form-control{placeholder: 'キーワード検索', type: 'text'}/
-        %button.btn.btn-default{type: 'submit'} 検索
+        %button.btn.btn-default{type: 'submit', id: 'topbar-seach'} 検索
 .t-contents
   .t-content-left
     .t-content-left-top
@@ -59,10 +61,39 @@
     .t-content-left-bottom
       = render partial: 't-content-left-bottom'
   .t-content-center
-    .t-content-center-top
-      = form_for @tweet do |f|
-        = f.text_field :body, placeholder: '  いまどうしてる？', class: 't-content-center-top-textfield'
-        = f.submit 'ツイート', class: 't-content-center-top-send-btn'
+    .t-content-center-tweet
+      .t-content-center-tweet-top
+        .t-content-center-tweet-top__profile_image
+          = image_tag(current_user.profile_image, class: 't-content-center-tweet-top__profile_image__size')
+        .t-content-center-tweet-top__textarea
+          = form_for @tweet do |f|
+            = f.text_area :body, placeholder: " いまどうしてる？", rows: 3, cols: 'auto', class: 'form-control', id: 'input-textarea'
+            = f.submit 'ツイート', type: 'hidden', class: 'hidden-tweet-btn'
+            .t-content-center-tweet-bottom
+              %nav.navbar.navbar-default
+                .navbar-header
+                  %button.navbar-toggle.collapsed{'data-target' => '#navbarEexample7', 'data-toggle' => 'collapse', :type => 'button'}
+                    %span.sr-only Toggle navigation
+                    %span.icon-bar
+                    %span.icon-bar
+                    %span.icon-bar
+                #navbarEexample7.collapse.navbar-collapse
+                  %ul.nav.navbar-nav
+                    %li.navbar-nav
+                      = link_to root_path do
+                        = fa_icon('camera lg', class: 't-content-center-tweet-bottom-icon')
+                    %li.navbar-nav
+                      = link_to root_path do
+                        = fa_icon('file-video-o lg', class: 't-content-center-tweet-bottom-icon')
+                    %li.navbar-nav
+                      = link_to root_path do
+                        = fa_icon('bar-chart lg', class: 't-content-center-tweet-bottom-icon')
+                    %li.navbar-nav
+                      = link_to root_path do
+                        = fa_icon('map-marker lg', class: 't-content-center-tweet-bottom-icon')
+                  %button.btn.btn-default.navbar-btn.navbar-right.t-content-center-tweet-bottom-send-btn
+                    %span.glyphicon.glyphicon-pencil{"aria-hidden" => "true"}
+                    ツイート
     .t-content-center-bottom
       = render partial: 'tweet', collection: @tweets
   .t-content-right
