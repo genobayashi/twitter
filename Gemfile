@@ -41,6 +41,7 @@ gem 'dotenv-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'carrierwave'
 
 group :production do
   gem 'unicorn'
