@@ -1,0 +1,7 @@
+%h1 ユーザー一覧
+- @users.each do |user|
+  = user.name
+  %br/
+  = image_tag(user.profile_image, class: "avatar_image")
+  = link_to("#{user.name}のページだよ。", user_path(user.id) )
+  %br/
