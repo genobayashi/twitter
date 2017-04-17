@@ -140,12 +140,13 @@
           border-style: none;
         }
 
-        .navbar-nav > li > a {
+        .navbar-nav > li {
           padding: 13px 20px 10px;
         }
 
         .t-content-center-tweet-bottom-icon{
           color: $LittleLiteBlue;
+          cursor: pointer;
         }
 
         .navbar-btn{
@@ -194,18 +195,8 @@
 
           &__name{
             float:left;
-          }
-
-          &__user_name{
-            float: left;
-          }
-
-          &__created_at{
-            float: left;
-          }
-
-          &__dropdown{
-            float: right;
+            color: #000;
+            font-weight: bold;
           }
         }
 
