@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'tweets#index'
+  resources :follows, only: [:create, :destroy]
   resources :users do
     member do
       get :following, :followers
