@@ -1,2 +1,2 @@
-= form_for(current_user.active_relationships.find_by(following_id: @user.id), html: { method: :delete },:url => { action: :index } ) do |f|
-  = f.submit "Unfollow", class: "btn"
+= form_for(current_user.active_relationships.find_by(following_id: user.id), :url => follow_path(current_user.active_relationships.find_by(following_id: user.id).id), method: :delete ) do |f|
+  = f.submit "フォローをやめる", class: "button btn btn-default t-content-right-top-recommend-user-list-once__follow-btn", "aria-label" => "Left Align"

@@ -21,6 +21,6 @@
           %li
             %a{"data-toggle" => "dropdown", :href => "#", :role => "button",class: 'recommend-user-name'}
               %span.glyphicon.glyphicon-remove{"aria-hidden" => "true"}
-    %button.btn.btn-default.t-content-right-top-recommend-user-list-once__follow-btn{"aria-label" => "Left Align", :type => "button"}
-      %span.glyphicon.glyphicon.glyphicon-user{"aria-hidden" => "true"}>
-      フォローする
+    / %button.btn.btn-default.t-content-right-top-recommend-user-list-once__follow-btn{"aria-label" => "Left Align", :type => "button"}
+    /   %span.glyphicon.glyphicon.glyphicon-user{"aria-hidden" => "true"}>
+    = render partial: '/users/follow_form', locals: { user: user }
