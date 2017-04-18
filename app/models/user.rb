@@ -7,13 +7,11 @@ class User < ApplicationRecord
   has_many :messages
 
   has_many :active_relationships,class_name:  "Follow", foreign_key: "follower_id", dependent: :destroy
-  has_many :active_relationships,class_name:  "Follow", foreign_key: "following_id", dependent: :destroy
+  #has_many :active_relationships,class_name:  "Follow", foreign_key: "following_id", dependent: :destroy
   has_many :following, through: :active_relationships, source: :following
   has_many :followers, through: :passive_relationships, source: :follower
 
   has_many :passive_relationships, class_name: "Follow", foreign_key: "following_id", dependent: :destroy
-
-  has_many :followers, through: :passive_relationships, source: :follower
 
 
   # ユーザーをフォローする
