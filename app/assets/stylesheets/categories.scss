@@ -1,0 +1,134 @@
+
+.modal-background-color{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  opacity: 0.6;
+  z-index: 100;
+}
+
+.create-category{
+
+  .line{
+  }
+
+  .form-horizontal{
+    height: 180px;
+    width: 850px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    background-color: #E0FFFF;
+    z-index: 1000;
+    border-radius: 10px;
+  }
+}
+
+.new{
+
+  .navbar-fixed-top, .navbar-fixed-bottom{
+    position: relative;
+  }
+
+  .user-page-twitter-icon{
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    z-index: 1;
+    color: $LiteBlue;
+  }
+
+  .global-topbar{
+    background-color: $WhiteColor;
+    padding: 0 15%;
+    z-index: 0;
+
+    .navbar-twiiter-icon{
+      padding-left: 70px;
+    }
+
+    #topbar-seach{
+      background-color: $very-Lite-Gray;
+    }
+
+    .topbar-profile_image{
+      padding-top: 8px;
+      padding-bottom: 0;
+    }
+
+    .topbar-profile_image__size{
+      height: 30px;
+      width: 30px;
+    }
+
+    #tweet-btn{
+      background-color: $LiteBlue;
+      color: $WhiteColor;
+    }
+
+    .modal-content{
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      margin: auto;
+    }
+
+    .modal-title{
+      text-align: center;
+      color: $Gray;
+    }
+
+    .modal-body{
+      @include clearfix();
+      background-color: #eff;
+      border-bottom: 1px solid $Lite-Gray;
+      padding: 10px;
+
+      .t-topnavbar-tweet-modal-textarea{
+      
+      }
+
+      .t-topnavbar-tweet-modal-bottom{
+
+        .navbar-collapse{
+          padding: 0;
+        }
+
+        .navbar{
+          min-height: auto;
+          margin-bottom: 0;
+          background-color: #eff;
+          border-style: none;
+        }
+
+        .navbar-nav > li {
+          padding: 13px 20px 10px;
+        }
+
+        .t-topnavbar-tweet-modal-bottom-icon{
+          color: $LittleLiteBlue;
+          cursor: pointer;
+        }
+
+        .navbar-btn{
+          margin: 10px 0 0 0;
+          background-color: $LiteBlue;
+          color: $WhiteColor;
+        }
+      }
+    }
+  }
+
+  .navbar{
+    margin-bottom: 0;
+  }
+
+  .t-contents{
+    margin-top: 0;
+  }
+}

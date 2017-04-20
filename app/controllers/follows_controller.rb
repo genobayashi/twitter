@@ -1,7 +1,7 @@
 class FollowsController < ApplicationController
   def create
     Follow.create(create_params)
-    redirect_to controller: 'tweets', action: 'index'
+    redirect_to new_category_path
   end
 
   def destroy
