@@ -1,0 +1,85 @@
+/ = render partial: '/shared/top-navbar'
+/ .t-contents
+/   .t-content-left
+/     .t-content-left-top
+/       .panel.panel-default
+/         .panel-body
+/           = link_to root_path, class: "current_user" do
+/             .user-profile-image-ground
+/               = image_tag(current_user.profile_image, class: 'user-profile_image') if current_user.profile_image?
+/             .user-background_image
+/               = image_tag(current_user.background_image, class: 'user-background_image') if current_user.background_image?
+/             .user-info
+/               .user-name
+/                 = current_user.name
+/               .user-id
+/                 = current_user.user_name
+/           .user-activity
+/             .row
+/               .col-xs-4.tweets-num
+/                 .text
+/                   ツイート
+/                 .num
+/                   = link_to current_user.tweets.count, root_path
+/               .col-xs-4.follow-num
+/                 .text
+/                   フォロー
+/                 .num
+/                   = link_to current_user.following.count
+/               .col-xs-4.follower-num
+/                 .text
+/                   フォロワー
+/                 .num
+/                   = link_to current_user.followers.count
+/       .t-content-left-top__background-image
+/       .t-content-left-top__pofile-image
+/       .t-content-left-top__name
+/       .t-content-left-top__user-name
+/       .t-content-left-top__user-tweet-count
+/       .t-content-left-top__follow-count
+/       .t-content-left-top__follower-count
+/     .t-content-left-bottom
+/       = render partial: 't-content-left-bottom'
+/   .t-content-center
+/     .t-content-center-tweet
+/       .t-content-center-tweet-top
+/         = render partial: 't-content-center-tweet-top'
+/     .t-content-center-bottom
+/       = render partial: 'tweet', collection: @tweets
+/   .t-content-right
+/     .t-content-right-top
+/       .t-content-right-top-title
+/         .t-content-right-top-title__name
+/           おすすめユーザー
+/         .t-content-right-top-title__update
+/           更新
+/         .t-content-right-top-title__see-all
+/           すべて見る
+/       .t-content-right-top-recommend-user-list
+/         - @user.each do |user|
+/           = render partial: 't-content-right-top-recommend-user-list', locals: { user: user }
+/     .t-content-right-center
+/       = render partial: 't-content-right-center'
+/     .t-content-right-bottom
+/       .t-content-right-bottom__any-menu
+/         .first-stage
+/           © 2017 Twitter / Twitterについて
+/         .second-stage
+/           クッキー / 広告について / ブランド ブログ
+/         .third-stage
+/           ステータス / アプリ連携 / 採用情報
+/         .fourth-stage
+/           広告掲載方法 / 開発者
+/       .t-content-right-bottom__twitter-advertisement
+/         twitter広告
+.create-category
+  = form_for @category do |f|
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+        = f.label :グループ名, class: 'chat-group-form__label'
+      .chat-group-form__field--right
+        = f.text_field :name, placeholder: 'カテゴリー名を入力してください', class: 'chat-group-form__input'
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+      .chat-group-form__field--right
+        = f.submit '送信', class: 'chat-group-form__action-btn', data:{disable_with: '送信中'}
