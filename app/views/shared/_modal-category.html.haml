@@ -1,0 +1,12 @@
+#sampleModal.modal.fade{:tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"}
+          %span ×
+        %h4.modal-title タイトル
+      .modal-body
+        本文
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} 閉じる
+        %button.btn.btn-primary{:type => "button"} ボタン

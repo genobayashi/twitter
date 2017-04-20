@@ -25,21 +25,21 @@
           = link_to root_path do
             = fa_icon('commenting lg')
             メッセージ
-      / %button.btn.btn-default.navbar-btn.navbar-right#tweet-btn
-      /   %span.glyphicon.glyphicon-pencil{"aria-hidden" => "true"}
-      /   ツイート
-      %button.btn.btn-default.navbar-btn.navbar-right#tweet-btn{"data-target" => "#sampleModal", "data-toggle" => "modal", :type => "button"}
+      %button.btn.btn-default.navbar-btn.navbar-right#tweet-btn
+        %span.glyphicon.glyphicon-pencil{"aria-hidden" => "true"}
         ツイート
-      / モーダル・ダイアログ
-      #sampleModal.modal.fade{:tabindex => "-1"}
-        .modal-dialog
-          .modal-content
-            .modal-header
-              %button.close{"data-dismiss" => "modal", :type => "button"}
-                %span ×
-              .modal-title ツイートする
-            .modal-body
-              = render partial: '/shared/top-navbar-tweet-modal'
+      / %button.btn.btn-default.navbar-btn.navbar-right#tweet-btn{"data-target" => "#sampleModal", "data-toggle" => "modal", :type => "button"}
+      /   ツイート
+      / / モーダル・ダイアログ
+      / #sampleModal.modal.fade{:tabindex => "-1"}
+      /   .modal-dialog
+      /     .modal-content
+      /       .modal-header
+      /         %button.close{"data-dismiss" => "modal", :type => "button"}
+      /           %span ×
+      /         .modal-title ツイートする
+      /       .modal-body
+      /         = render partial: '/shared/top-navbar-tweet-modal'
       %ul.nav.navbar-nav.navbar-right
         %li.dropdown
           %a.dropdown-toggle.topbar-profile_image{'data-toggle' => 'dropdown', :href => '', :role => 'button'}

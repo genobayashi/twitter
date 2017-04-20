@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   end
   resources :top, only: [:index]
   resources :tweets, only: [:index, :create]
+  resources :categories, only: [:new, :create]
 end
