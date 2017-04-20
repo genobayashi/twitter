@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.order("created_at DESC").includes(:user)
     @tweet = Tweet.new
-    @user = User.order("RAND()").where.not(id: current_user.id).limit(3)
+    @user = User.order("RAND()").where.not(id: current_user).where.not(id: current_user.following).limit(3)
   end
 
   def create

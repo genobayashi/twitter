@@ -1,0 +1,62 @@
+= link_to fa_icon('twitter 2x'), root_path, class: 'user-page-twitter-icon'
+%nav.navbar.navbar-default.navbar-fixed-top.global-topbar
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{'data-target' => '#navbarEexample7', 'data-toggle' => 'collapse', :type => 'button'}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    #navbarEexample7.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li.navbar-nav
+          = link_to root_path do
+            = fa_icon('home lg')
+            ホーム
+        %li.navbar-nav
+          = link_to root_path do
+            = fa_icon('flash lg')
+            モーメント
+        %li.navbar-nav
+          = link_to root_path do
+            = fa_icon('bell lg')
+            通知
+        %li.navbar-nav
+          = link_to root_path do
+            = fa_icon('commenting lg')
+            メッセージ
+      / %button.btn.btn-default.navbar-btn.navbar-right#tweet-btn
+      /   %span.glyphicon.glyphicon-pencil{"aria-hidden" => "true"}
+      /   ツイート
+      %button.btn.btn-default.navbar-btn.navbar-right#tweet-btn{"data-target" => "#sampleModal", "data-toggle" => "modal", :type => "button"}
+        ツイート
+      / モーダル・ダイアログ
+      #sampleModal.modal.fade{:tabindex => "-1"}
+        .modal-dialog
+          .modal-content
+            .modal-header
+              %button.close{"data-dismiss" => "modal", :type => "button"}
+                %span ×
+              .modal-title ツイートする
+            .modal-body
+              = render partial: '/shared/top-navbar-tweet-modal'
+      %ul.nav.navbar-nav.navbar-right
+        %li.dropdown
+          %a.dropdown-toggle.topbar-profile_image{'data-toggle' => 'dropdown', :href => '', :role => 'button'}
+            = image_tag(current_user.profile_image, class: 'topbar-profile_image__size') if current_user.profile_image?
+            %span.caret
+          %ul.dropdown-menu{:role => 'menu'}
+            %li
+              = link_to root_path do
+                = fa_icon('home lg')
+                ホーム
+            %li
+              = link_to root_path do
+                = fa_icon('flash lg')
+                モーメント
+            %li
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete
+      %form.navbar-form.navbar-right{role: 'search'}
+        .form-group
+          %input.form-control{placeholder: 'キーワード検索', type: 'text'}/
+        %button.btn.btn-default{type: 'submit', id: 'topbar-seach'} 検索
